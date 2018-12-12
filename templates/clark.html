@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{senate_info[11].County}}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../static/CSS/style.css">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+
+<script src="../static/js/data.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+  <div class="col-lg-12">
+  <div class="well">
+     <img src="../static/images/seal-clark.png" height="200" width="200">
+	 <!-- <h1 style="display:inline" style="text-align:center"><a href="index.html" style="text-decoration: none">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Adams County</a></h1> -->
+	 <h1 style="display:inline" style="text-align:center">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {{senate_info[11].County}}</h1>
+	<img src="../static/images/clark.png" style="float:right" height="200" width="200">
+   
+</div>
+</div>
+</div>	
+	
+<div class="container">
+<div class="row">
+<div class="col-lg-8">
+	<div class="well">
+	<div class="clearfix">
+	
+	<h1 style="text-align:center"> Election Results </h1>
+	
+	<div id="bar"></div>
+	<script src="../static/js/clarkBar.js"></script>
+	
+	<hr>
+	<h3> SENATE </h3>
+	<hr>
+	<h3 style="text-align:left"> Sherrod Brown: {{senate_info[11].dem_votes}} ({{senate_info[11].dem_percent}}%)</h3>
+	<h3 style="text-align:left"> Jim Rennaci : {{senate_info[11].gop_votes}} ({{senate_info[11].gop_percent}}%)</h3>
+	<hr>
+	<h3>GOVERNOR</h3>
+	<hr>
+	<h3 style="text-align:left"> Richard Courdray: {{gov_info[11].dem_votes}} ({{gov_info[11].dem_percent}}%)</h3>
+	<h3 style="text-align:left"> Mike DeWine : {{gov_info[11].gop_votes}} ({{gov_info[11].gop_percent}}%)</h3>
+	<hr>
+	
+	
+	
+	
+	<h1 style="text-align:center">Education Summary</h1>
+	
+	<!-- <div class="clearfix"> -->
+	<div id="pie"></div>
+	<script src="../static/js/clarkPie.js"></script>
+	
+	<hr>
+	<h3 style="text-align:left"> Less than HS: {{senate_info[11].less_than_HighSchool}}%</h3>
+	<h3 style="text-align:left"> High School: {{senate_info[11].has_HighSchool}}%</h3>
+	<h3 style="text-align:left"> Some College: {{senate_info[11].some_College}}%</h3>
+	<h3 style="text-align:left"> College Graduate: {{senate_info[11].Undergrad_plus}}%</h3>
+	<hr>
+	
+	
+	
+
+	
+	
+	
+	
+	
+	</div> 
+	</div>
+</div>
+
+<div class="col-sm-4">
+	<div class="well">
+	<h2 align="center"><a href="{{ url_for('index')}}"> Home Page</a></h1>
+    <hr>
+	<h2 align="center"> Counties </h1>
+	<hr>
+	<div class="countylist">
+    <h4><a href="{{ url_for('adams')}}" style="color:#ffffff">ADAMS</a></h4>
+	<h4><a href="{{ url_for('allen')}}" style="color:#ffffff">ALLEN</a></h4>
+	<h4><a href="{{ url_for('ashland')}}" style="color:#ffffff">ASHLAND</a></h4>
+	<h4><a href="{{ url_for('ashtabula')}}" style="color:#ffffff">ASHTABULA</a></h4>
+	<h4><a href="{{ url_for('athens')}}" style="color:#ffffff">ATHENS</a></h4>
+	<h4><a href="{{ url_for('auglaize')}}" style="color:#ffffff">AUGLAIZE</a></h4>
+    <h4><a href="{{ url_for('belmont')}}" style="color:#ffffff">BELMONT </a></h4>
+	<h4><a href="{{ url_for('brown')}}" style="color:#ffffff">BROWN </a></h4>
+	<h4><a href="{{ url_for('butler')}}" style="color:#ffffff">BUTLER </a></h4>
+	<h4><a href="{{ url_for('carroll')}}" style="color:#ffffff">CARROLL </a></h4>
+	<h4><a href="{{ url_for('champaign')}}" style="color:#ffffff">CHAMPAIGN </a></h4>
+	<h4><a href="{{ url_for('clark')}}" style="color:#ffffff">CLARK </a></h4>
+	<h4><a href="{{ url_for('clermont')}}" style="color:#ffffff">CLERMONT </a></h4>
+	<h4><a href="{{ url_for('clinton')}}" style="color:#ffffff">CLINTON </a></h4>
+	<h4><a href="{{ url_for('columbiana')}}" style="color:#ffffff">COLUMBIANIA </a></h4>
+	<h4><a href="{{ url_for('coshocton')}}" style="color:#ffffff">COSHOCTON </a></h4>
+	<h4><a href="{{ url_for('crawford')}}" style="color:#ffffff"> CRAWFORD</a></h4>
+	<h4><a href="{{ url_for('cuyahoga')}}" style="color:#ffffff">CUYAHOGA </a></h4>
+	<h4><a href="{{ url_for('darke')}}" style="color:#ffffff">DARKE</a></h4>
+	<h4><a href="{{ url_for('defiance')}}" style="color:#ffffff">DEFIANCE </a></h4>
+	<h4><a href="{{ url_for('delaware')}}" style="color:#ffffff">DELAWARE </a></h4>
+	<h4><a href="{{ url_for('erie')}}" style="color:#ffffff">ERIE</a></h4>
+	<h4><a href="{{ url_for('fairfield')}}" style="color:#ffffff">FAIRFIELD </a></h4>
+	<h4><a href="{{ url_for('fayette')}}" style="color:#ffffff">FAYETTE</a></h4>
+	<h4><a href="{{ url_for('franklin')}}" style="color:#ffffff">FRANKLIN </a></h4>
+	<h4><a href="{{ url_for('fulton')}}" style="color:#ffffff">FULTON </a></h4>
+	<h4><a href="{{ url_for('gallia')}}" style="color:#ffffff">GALLIA </a></h4>
+	<h4><a href="{{ url_for('geauga')}}" style="color:#ffffff">GEAUGA</a></h4>
+	<h4><a href="{{ url_for('greene')}}" style="color:#ffffff">GREENE</a></h4>
+	<h4><a href="{{ url_for('guernsey')}}" style="color:#ffffff">GUERNSEY </a></h4>
+	<h4><a href="{{ url_for('hamilton')}}" style="color:#ffffff">HAMILTON </a></h4>
+	<h4><a href="{{ url_for('hancock')}}" style="color:#ffffff">HANCOCK</a></h4>
+	<h4><a href="{{ url_for('hardin')}}" style="color:#ffffff">HARDIN</a></h4>
+	<h4><a href="{{ url_for('harrison')}}" style="color:#ffffff">HARRISON</a></h4>
+	<h4><a href="{{ url_for('henry')}}" style="color:#ffffff">HENRY</a></h4>
+	<h4><a href="{{ url_for('highland')}}" style="color:#ffffff">HIGHLAND</a></h4>
+	<h4><a href="{{ url_for('hocking')}}" style="color:#ffffff">HOCKING</a></h4>
+	<h4><a href="{{ url_for('holmes')}}" style="color:#ffffff">HOLMES</a></h4>
+	<h4><a href="{{ url_for('huron')}}" style="color:#ffffff">HURON</a></h4>
+	<h4><a href="{{ url_for('jackson')}}" style="color:#ffffff">JACKSON</a></h4>
+	<h4><a href="{{ url_for('jefferson')}}" style="color:#ffffff">JEFFERSON</a></h4>
+	<h4><a href="{{ url_for('knox')}}" style="color:#ffffff">KNOX</a></h4>
+	<h4><a href="{{ url_for('lake')}}" style="color:#ffffff">LAKE</a></h4>
+	<h4><a href="{{ url_for('lawrence')}}" style="color:#ffffff">LAWRENCE</a></h4>
+	<h4><a href="{{ url_for('licking')}}" style="color:#ffffff">LICKING</a></h4>
+	<h4><a href="{{ url_for('logan')}}" style="color:#ffffff">LOGAN</a></h4>
+	<h4><a href="{{ url_for('lorain')}}" style="color:#ffffff">LORAIN</a></h4>
+	<h4><a href="{{ url_for('lucas')}}" style="color:#ffffff">LUCAS</a></h4>
+	<h4><a href="{{ url_for('madison')}}" style="color:#ffffff">MADISON</a></h4>
+	<h4><a href="{{ url_for('mahoning')}}" style="color:#ffffff">MAHONING</a></h4>
+	<h4><a href="{{ url_for('marion')}}" style="color:#ffffff">MARION </a></h4>
+	<h4><a href="{{ url_for('medina')}}" style="color:#ffffff">MEDINA </a></h4>
+	<h4><a href="{{ url_for('meigs')}}" style="color:#ffffff">MEIGS </a></h4>
+	<h4><a href="{{ url_for('mercer')}}" style="color:#ffffff">MERCER </a></h4>
+	<h4><a href="{{ url_for('miami')}}" style="color:#ffffff">MIAMI </a></h4>
+	<h4><a href="{{ url_for('monroe')}}" style="color:#ffffff">MONROE </a></h4>
+	<h4><a href="{{ url_for('montgomery')}}" style="color:#ffffff">MONTGOMERY </a></h4>
+	<h4><a href="{{ url_for('morgan')}}" style="color:#ffffff">MORGAN</a></h4>
+	<h4><a href="{{ url_for('morrow')}}" style="color:#ffffff">MORROW</a></h4>
+	<h4><a href="{{ url_for('muskingum')}}" style="color:#ffffff">MUSKINGUM</a></h4>
+	<h4><a href="{{ url_for('noble')}}" style="color:#ffffff">NOBLE </a></h4>
+	<h4><a href="{{ url_for('ottawa')}}" style="color:#ffffff">OTTAWA </a></h4>
+	<h4><a href="{{ url_for('paulding')}}" style="color:#ffffff">PAULDING</a></h4>
+	<h4><a href="{{ url_for('perry')}}" style="color:#ffffff">PERRY </a></h4>
+	<h4><a href="{{ url_for('pickaway')}}" style="color:#ffffff">PICKAWAY</a></h4>
+	<h4><a href="{{ url_for('pike')}}" style="color:#ffffff">PIKE </a></h4>
+	<h4><a href="{{ url_for('portage')}}" style="color:#ffffff">PORTAGE</a></h4>
+	<h4><a href="{{ url_for('preble')}}" style="color:#ffffff">PREBLE</a></h4>
+	<h4><a href="{{ url_for('putnam')}}" style="color:#ffffff">PUTNAM</a></h4>
+	<h4><a href="{{ url_for('richland')}}" style="color:#ffffff">RICHLAND</a></h4>
+	<h4><a href="{{ url_for('ross')}}" style="color:#ffffff">ROSS</a></h4>
+	<h4><a href="{{ url_for('sandusky')}}" style="color:#ffffff">SANDUSKY</a></h4>
+	<h4><a href="{{ url_for('scioto')}}" style="color:#ffffff">SCIOTO</a></h4>
+	<h4><a href="{{ url_for('seneca')}}" style="color:#ffffff">SENECA</a></h4>
+	<h4><a href="{{ url_for('shelby')}}" style="color:#ffffff">SHELBY</a></h4>
+	<h4><a href="{{ url_for('stark')}}" style="color:#ffffff">STARK</a></h4>
+	<h4><a href="{{ url_for('summit')}}" style="color:#ffffff">SUMMIT</a></h4>
+	<h4><a href="{{ url_for('trumbull')}}" style="color:#ffffff">TRUMBULL</a></h4>
+	<h4><a href="{{ url_for('tuscarawas')}}" style="color:#ffffff">TUSCARAWAS</a></h4>
+	<h4><a href="{{ url_for('union')}}" style="color:#ffffff">UNION </a></h4>
+	<h4><a href="{{ url_for('vanwert')}}" style="color:#ffffff">VAN WERT</a></h4>
+	<h4><a href="{{ url_for('vinton')}}" style="color:#ffffff">VINTON</a></h4>
+	<h4><a href="{{ url_for('warren')}}" style="color:#ffffff">WARREN</a></h4>
+	<h4><a href="{{ url_for('washington')}}" style="color:#ffffff">WASHINGTON</a></h4>
+	<h4><a href="{{ url_for('wayne')}}" style="color:#ffffff">WAYNE</a></h4>
+	<h4><a href="{{ url_for('williams')}}" style="color:#ffffff">WILLIAMS</a></h4>
+	<h4><a href="{{ url_for('wood')}}l" style="color:#ffffff">WOOD</a></h4>
+	<h4><a href="{{ url_for('wyandot')}}" style="color:#ffffff">WYANDOT</a></h4>
+
+
+	
+
+
+
+	
+  </body>
+  </html>
