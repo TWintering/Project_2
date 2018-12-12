@@ -1,0 +1,38 @@
+h2, h4,h3, h5, h6 {font-family: 'Crimson Text', serif;
+text-align: center;
+}
+
+
+h1 {font-family: 'Crimson Text', serif;
+margin-top: 40px;
+font-weight:bold;
+font-size: 300%
+}
+
+.jumbotron{background-color: #BB0000;
+	   color:#ffffff;
+	
+	}
+	
+body{background-color:#666666;}
+
+.seal{float:left;}
+
+.buckeye{float:right;margin-top:0px;}
+
+.well{background-color: #BB0000;
+      color:#ffffff;
+	  align:center;}
+
+
+.countylist{text-align:center;}
+
+a {color:#ffffff;}
+
+#pie {background-color:#BB0000;}
+
+#map-id {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
